@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Family App</title>
+
+
+        <!-- Add additional services that you want to use -->
+        <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-auth.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-database.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-firestore.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-messaging.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-functions.js"></script>
+        <!-- Add additional services that you want to use (END HERE) -->
+
+
+        <!-- FIREBASE SCRIPTS -->
+        <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+        <script>
+            // Initialize Firebase
+            var config = {
+                apiKey: "AIzaSyCR-2uyeWeFbwyGvglTnE-Rhsqsw_X-YLE",
+                authDomain: "family-mhmd.firebaseapp.com",
+                databaseURL: "https://family-mhmd.firebaseio.com",
+                projectId: "family-mhmd",
+                storageBucket: "family-mhmd.appspot.com",
+                messagingSenderId: "138501547199"
+            };
+            firebase.initializeApp(config);
+        </script>
+        <!-- FIREBASE SCRIPTS END -->
+
+
+        <!-- ANGULARJS SCRIPTS -->
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+        <script src="js/ng/family-app.js"></script>
+        <!-- ANGULARJS SCRIPTS END -->
+
+
+
+        <!-- Bootstrap CDN -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+        <!-- Bootstrap CDN END -->
+
+    </head>
+
+    <body ng-app="myApp">
+        <header></header>
+<!--        <div id="content">
+            <label>Name:</label> <input type="text" id="name" placeholder="Name">
+            <label>Birth Date:</label> <input type="date" id="birth_date" placeholder="BirthDate">
+            <label>E-mail:</label> <input type="text" id="email" placeholder="E-mail">
+            <label>Username:</label> <input type="text" id="username" placeholder="Username">
+            <label>Password:</label> <input type="password" id="password" placeholder="Password">
+            <label>Type:</label>
+            <select id="type">
+                <option value="1">Family Admin</option>
+                <option value="2">Family Member</option>
+            </select>
+            <button onclick="writeUserData()">Add Data</button>
+            <br>
+            <h1 id="check"></h1>
+        </div>-->
+        <registration-form></registration-form>
+
+
+
+        <footer></footer>
+    </body>
+
+
+
+</html>
+
+
+
+<script src="js/firebase/firebase.js"></script>
+<script src="js/ng/family-app.js"></script>
+
+
+</script>

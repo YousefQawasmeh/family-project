@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-app.js"></script>
+
+    <!-- Add additional services that you want to use -->
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-messaging.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase-functions.js"></script>
+
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.5.7/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCR-2uyeWeFbwyGvglTnE-Rhsqsw_X-YLE",
+            authDomain: "family-mhmd.firebaseapp.com",
+            databaseURL: "https://family-mhmd.firebaseio.com",
+            projectId: "family-mhmd",
+            storageBucket: "family-mhmd.appspot.com",
+            messagingSenderId: "138501547199"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+
+
+
+
+</head>
+
+<body>
+<header></header>
+<div id="content">
+   <h1>Registered Successfully</h1>
+</div>
+<footer></footer>
+</body>
+
+
+
+</html>
+
+
+
+<script>
+    var usersDB = firebase.database().ref('users');
+    function dbBring() {
+        var myTx = document.getElementById("myText");
+        var dbRef = firebase.database().ref().chile();
+    }
+
+
+    function writeUserData() {
+        var newUser = usersDB.push({
+            name: document.getElementById('name').value,
+            birth_date: document.getElementById('birth_date').value,
+            email: document.getElementById('email').value,
+            username: document.getElementById('username').value,
+            password: document.getElementById('password').value,
+            type: document.getElementById('type').value
+        }).then((snap) => { document.getElementById("check").innerHTML = snap.key; });
+
+    }
+
+
+</script>
